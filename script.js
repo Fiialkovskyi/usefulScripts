@@ -46,3 +46,81 @@
 
 // const updatedScools = editName("Yorktown", "Harvard", schools);
 // console.log(updatedScools);
+
+
+// *****Найти сумму элементов в масиве*****
+// const arr = [1, 2, 3, 4, 3, 2, 1];
+
+// const sum = arr.reduce((acc, item) => {
+//     return acc + item
+// }, 0)
+
+// console.log(sum);
+
+
+// *****Найти самое большое число в масиве*****
+// const arr = [1, 2, 3, 4, 3, 2, 1];
+
+// const max = arr.reduce((acc, cur) => {
+//     return acc > cur ? acc : cur;
+// })
+
+// console.log(max);
+
+
+
+// *****Преобразовать массив в обьект*****
+// const colors = [
+//     {
+//         id: '-xekare',
+//         title: "rad red",
+//         rating: 3
+//     },
+//     {
+//         id: '-jbwsof',
+//         title: "big blue",
+//         rating: 2
+//     },
+//     {
+//         id: '-prigbj',
+//         title: "grizzly grey",
+//         rating: 5
+//     },
+//     {
+//         id: '-ryhbhsl',
+//         title: "banana",
+//         rating: 1
+//     }
+// ]
+
+// const hashColors = colors.reduce((hash, {id, title, rating}) => {
+//     hash[id] = {title, rating}
+//     return hash
+// }, {});
+
+// console.log(hashColors);
+
+
+// const arr = [
+//     {name: "React", type: "library", owner: "Facebook"},
+//     {name: "Angular", type: "framework", owner: "Google"}
+// ]
+
+// const lang = arr.reduce((object, {name, type, owner}) => {
+//     object[name] = {type, owner};
+//     return object;
+// }, {})
+
+// console.log(lang);
+
+
+
+// *****Сведение массива с несколькими экземпляра одного и того же значения в массив различных значений*****
+// const colors = ["red", "red", "green", "blue", "green"];
+
+// const distinctColors = colors.reduce((distinct, color) => {
+//     console.log(Array.isArray(distinct));
+//     return distinct.indexOf(color) === -1 ? [...distinct, color] : distinct;
+// },[])
+
+// console.log(distinctColors);
