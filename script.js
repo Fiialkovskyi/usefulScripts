@@ -184,11 +184,16 @@
 
 
 // *****Композиция*****
-// const compose = (...fns) => {
-//     if (fns) {
-//         fns.reduce((composed, f) => f(composed), fns)
-//     }
-// }
+// const compose = (...fns) =>
+//     (arg) =>
+//         fns.reduce(
+//             (composed, f) => f(composed),
+//             arg
+//         )
 
-// compose(() => console.log(1), () => console.log(2));
+// const a = () => console.log('a');
+// const b = () => console.log('b');
+
+// const c = compose(a, b);
+// c();
 
