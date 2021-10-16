@@ -135,3 +135,60 @@
 // const createDomElement = tag => innerText => `<${tag}>${innerText}</${tag}>`;
 // const div = createDomElement('div');
 // div('Some text');
+
+
+
+// *****Рекурсия*****
+// const countdown = (count) => {
+//     if (count > 0) {
+//         console.log(count);
+//         countdown(count - 1);
+//     } else {
+//         console.log(count);
+//     }
+// }
+
+// countdown(10)
+
+// const countdown2 = (count, fn) => {
+//     fn(count);
+//     count > 0 ? countdown2(count - 1, fn) : count;
+// }
+
+// countdown2(20, count => console.log(count));
+
+
+
+// *****Глубокий обход обьекта с целью извлечения вложеного значения*****
+// const dan = {
+//     type: "person",
+//     data: {
+//       gender: "male",
+//       info: {
+//         id: 22,
+//         fullname: {
+//           first: "Dan",
+//           last: "Deacon"
+//         }
+//       }
+//     }
+//   }
+
+//   const deepPick = (fields, object={}) => {
+//       const [first, ...remaining] = fields.split('.');
+//       return (remaining.length) ? deepPick(remaining.join('.'), object[first]) : object[first];
+//   }
+
+// console.log(deepPick('data', dan));
+
+
+
+// *****Композиция*****
+// const compose = (...fns) => {
+//     if (fns) {
+//         fns.reduce((composed, f) => f(composed), fns)
+//     }
+// }
+
+// compose(() => console.log(1), () => console.log(2));
+
