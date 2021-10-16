@@ -124,3 +124,14 @@
 // },[])
 
 // console.log(distinctColors);
+
+
+
+// *****Каррирование*****
+// const userLog = userName => message => `${userName}: ${message}`;
+// const log = userLog('James');
+// console.log(log('Go home!!!'));
+
+// const createDomElement = tag => innerText => `<${tag}>${innerText}</${tag}>`;
+// const div = createDomElement('div');
+// div('Some text');
